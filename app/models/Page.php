@@ -1,0 +1,17 @@
+<?php
+class Page {
+    private $db;
+  
+    public function __construct(){
+      $this->db = new Database;
+    }
+
+    public function getPages(){
+      $this->db->query("SELECT * FROM posts");
+
+      return $this->db->resultSet();
+    }
+}
+
+  
+ 
